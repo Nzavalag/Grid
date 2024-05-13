@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url("./img/fondo.jpg");
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.grid-container>* {
+    box-shadow: 10px 6px 37px gray;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template:
+    "A A A"
+    "B C C"
+    "D D D"
+    ;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto 100vh auto;
+}
+    .header {
+        grid-area: A;
+        height: 50px;
+        width: auto;
+        color: whitesmoke;
+        font-size: 35px;
+    }
+
+    .sidebar {
+        grid-area: B;
+        width: 200px;
+        height: auto;
+        color: whitesmoke;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        grid-area: C;
+        width: 1000px;
+        height: auto;
+    }
+
+    .card{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items:center;
+        justify-content: space-between;
+        
+    }
+
+    .txt{
+        background-color: rgb(34, 34, 34);
+        color: whitesmoke;
+    }
+
+    .footer {
+        grid-area: D;
+        width: auto;
+        color: whitesmoke;
+    }
